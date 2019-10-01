@@ -19,4 +19,4 @@ RUN true \
 
 COPY sockd.conf /etc/
 
-ENTRYPOINT [ /usr/local/bin/openvpn.sh" ]
+ENTRYPOINT [ "/usr/local/bin/openvpn.sh" ]
