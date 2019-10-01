@@ -32,10 +32,11 @@ curl --proxy socks5://local.docker:1081 ipinfo.io
 
 ## Environment variables
 Various environment variables can influence behavior of the openvpn client:
-variable | meaning
--------- | -------
-HOST | remote hostname / ip
-PORT | remote port
-USERNAME | Auth username
-PASSWORD | Auth password
-AARGS | Any additional arguments to be passed to the openvpn commandline
+
+| variable | meaning |
+| -------- | ------- |
+| HOST | remote hostname / ip |
+| PORT | remote port |
+| USERNAME | Auth username |
+| PASSWORD | Auth password |
+| AARGS | Any additional arguments to be passed to the openvpn commandline |
