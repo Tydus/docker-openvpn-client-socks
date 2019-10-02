@@ -31,7 +31,7 @@ curl --proxy socks5://local.docker:1081 ipinfo.io
 ```
 
 ## Environment variables
-Various environment variables can influence behavior of the openvpn client:
+Various environment variables can influence behavior of the openvpn client (and the container itself):
 
 | variable | meaning |
 | -------- | ------- |
@@ -40,3 +40,4 @@ Various environment variables can influence behavior of the openvpn client:
 | USERNAME | Auth username |
 | PASSWORD | Auth password |
 | AARGS | Any additional arguments to be passed to the openvpn commandline |
+| HEALTHCHECK_IP | If specified, the IP will be pinged every 30 seconds for container healthcheck |
