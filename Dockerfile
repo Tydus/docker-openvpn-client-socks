@@ -21,4 +21,4 @@ COPY sockd.conf /etc/
 
 ENTRYPOINT [ "/usr/local/bin/openvpn.sh" ]
 
-HEALTHCHECK CMD /usr/local/bin/healthcheck.sh
+HEALTHCHECK --interval=10s --timeout=3s CMD /usr/local/bin/healthcheck.sh
