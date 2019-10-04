@@ -11,4 +11,4 @@ if [ "$USERNAME" -a "$PASSWORD" ]; then
     AARGS="$AARGS --auth-user-pass /up"
 fi
 
-exec /usr/sbin/openvpn --config /etc/openvpn/*.conf --dev tun0 --script-security 2 --up /usr/local/bin/sockd.sh $AARGS 
+exec /usr/sbin/openvpn --config /etc/openvpn/*.conf --dev tun0 --script-security 2 --up /usr/local/bin/sockd.sh --down /usr/local/bin/sockd_down.sh $AARGS 
