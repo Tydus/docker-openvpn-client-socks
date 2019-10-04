@@ -8,7 +8,7 @@
 
 FROM alpine
 
-COPY openvpn.sh sockd.sh healthcheck.sh /usr/local/bin/
+COPY openvpn.sh sockd.sh sockd_down.sh healthcheck.sh /usr/local/bin/
 
 RUN true \
     && echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
