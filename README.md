@@ -21,7 +21,7 @@ Alternatively, using `docker run` directly:
 docker run -it --rm --device=/dev/net/tun --cap-add=NET_ADMIN \
     --name openvpn-client \
     --volume /your/openvpn/directory/:/etc/openvpn/:ro -p 1081:1080 \
-    kizzx2/openvpn-client-socks
+    tydus/openvpn-client-socks
 ```
 
 Then connect to SOCKS proxy through through `local.docker:1081`. For example:
@@ -40,4 +40,5 @@ Various environment variables can influence behavior of the openvpn client (and 
 | USERNAME | Auth username |
 | PASSWORD | Auth password |
 | AARGS | Any additional arguments to be passed to the openvpn commandline |
-| HEALTHCHECK_IP | If specified, the IP will be pinged every 30 seconds for container healthcheck |
+| OPENVPN\_CONF | If specified, override the openvpn.conf by the content of this variable (be careful for multi-line envvar) |
+| HEALTHCHECK\_IP | If specified, the IP will be pinged every 30 seconds for container healthcheck |
